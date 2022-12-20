@@ -30,9 +30,22 @@ public class Vec2 {
         this.y+=pv.y;
         this.dir=Math.atan2(this.y, this.x);
         this.len=this.length();
+       // String tstr="add "+this.x+" "+this.y;
+       // System.out.println(tstr);
     }
 
-    public String toString(String pident)
+    public Vec2 Plus(Vec2 pv)
+    {
+        return (new Vec2(this.x+pv.x,this.y+pv.y));
+    }
+
+
+    public Vec2 Minus(Vec2 pv)
+    {
+        return (new Vec2(this.x-pv.x,this.y-pv.y));
+    }
+
+    public String toStr(String pident)
     {
         String tstr=pident+"[ "+Double.toString(this.x)+","+Double.toString(this.y)+"]";
         return tstr;

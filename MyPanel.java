@@ -12,11 +12,15 @@ public class MyPanel extends JPanel implements ActionListener {
     NeuralNet nnet;
     String rstr;
     AICar icar;
+    Walls walls;
     Timer timer;
     MyPanel()
     {
         timer = new Timer(10, this);
 		timer.start();
+
+        walls=new Walls();
+        System.out.println(walls.toStr("%%   "));
         icar=new AICar();
        // icar.gr2d=(Graphics2D)g;
         icar.Calculate(0.0);
@@ -54,9 +58,12 @@ public class MyPanel extends JPanel implements ActionListener {
     public void paint(Graphics g)
     {
         Graphics2D g2D= (Graphics2D) g;
-        g2D.setPaint(Color.blue);
+        super.paint(g);
+       /*  
+       g2D.setPaint(Color.blue);
         g2D.setStroke(new BasicStroke(5));
         g2D.drawLine(0, 0, 500, 500);
+        */
         icar.Calculate(0.0);
         icar.paint(g2D);
     }
