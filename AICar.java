@@ -1,6 +1,12 @@
 import java.awt.*;
 import java.awt.geom.AffineTransform;
 
+/**
+ * AICar class 
+ * artificial intelligence car class
+ */
+
+
 public class AICar {
 
     NeuralNet nnet;
@@ -9,7 +15,7 @@ public class AICar {
 
 
     /**
-        constructor
+     *   constructor
      */
     public AICar()
     {

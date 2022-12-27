@@ -52,6 +52,10 @@ public class NeuralNet {
         
     }
 
+    /**
+     * calculate new state of layers for new state of inpun neurons
+     */
+
     public void CalculateLayers()
     {
         for (int i=0;i<this.l_layer1.length;i++)
@@ -72,6 +76,12 @@ public class NeuralNet {
         }
 
     }
+
+    /**
+     * converts current state of neurons to a string
+     * @param pident identation
+     * @return result string
+     */
 
     public String toString(String pident)
     {

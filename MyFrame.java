@@ -1,9 +1,11 @@
 import javax.swing.*;
 
+/**
+ * MyFrame class , inherited from JFrame
+ * contains a MyPanel element
+ */
+
 public class MyFrame extends JFrame {
-
-        
-
     MyPanel panel;
     MyFrame()
     {
