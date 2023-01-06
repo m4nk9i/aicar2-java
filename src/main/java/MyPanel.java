@@ -1,3 +1,4 @@
+package src.main.java;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.IOException;
@@ -29,7 +30,7 @@ public class MyPanel extends JPanel implements ActionListener {
 		timer.start();
 
         try{
-            JSONstr = new String(Files.readAllBytes(Paths.get("walls1.json")));
+            JSONstr = new String(Files.readAllBytes(Paths.get("src\\main\\resources\\walls1.json")));
         } 
         catch(IOException e)
         {}
