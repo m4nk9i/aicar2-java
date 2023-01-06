@@ -1,4 +1,5 @@
 import java.lang.Float;
+import java.awt.*;
 
 /**
  * class of neural network
@@ -45,6 +46,7 @@ public class NeuralNet {
             l_layer2[i]=(float)0.0;
         }
 
+        //initial node connections
         this.l_layer0[0]=1.0f;
         this.l_conn01[0][0]=1.0f;
         this.l_conn12[0][0]=1.0f;
@@ -152,6 +154,15 @@ public class NeuralNet {
         tnet.l_layer1=this.l_layer1.clone();
         tnet.l_layer2=this.l_layer2.clone();
         return tnet;
+    }
+
+    /**
+     * method to draw current neural net map
+     * @param gr2D Graphics2D context
+     */
+    public void paint(Graphics2D gr2D)
+    {
+
     }
 
 }

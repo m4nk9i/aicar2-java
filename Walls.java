@@ -55,7 +55,7 @@ public class Walls {
         return tstr;
    }
    /**
-    * converts an JSON string to wall segments
+    * converts an JSON string to wall segments TODO: fix this method completly
     * @param pstr - JSON string of segments' coordinates
     */
 
@@ -82,9 +82,10 @@ public class Walls {
             }
             finally
             {
-                tlis[0]=new Vec2(Float.parseFloat(astr[0]),Float.parseFloat(astr[1]));
-                tlis[1]=new Vec2(Float.parseFloat(astr[2]),Float.parseFloat(astr[3]));
+                tlis[0]=new Vec2(Double.parseDouble(astr[0]),Double.parseDouble(astr[1]));
+                tlis[1]=new Vec2(Double.parseDouble(astr[2]),Double.parseDouble(astr[3]));
             }
+            //System.out.println(astr[0]+" && "+astr[1]);
             System.out.println(tlis[0].toStr("")+" ^ "+tlis[1].toStr(""));
             this.Segments.add(tlis.clone());
             

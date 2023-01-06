@@ -21,6 +21,22 @@ public class Vec2 {
         this.len=this.length();
     }
 
+    public Vec2(float pa, float plen)
+    {
+        this.len=plen;
+        this.dir=pa;
+        this.x=plen*Math.cos(pa);
+        this.y=plen*Math.sin(pa);
+    }
+
+    public void setAngLen(float pa, float plen)
+    {
+        this.len=plen;
+        this.dir=pa;
+        this.x=plen*Math.cos(pa);
+        this.y=plen*Math.sin(pa);
+    }
+
     /**
      * creates a new instance and copies coordinates
      */

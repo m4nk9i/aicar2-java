@@ -41,7 +41,7 @@ public class MyPanel extends JPanel implements ActionListener {
         System.out.println(walls.toStr("%%   "));
         icar=new AICar();
        // icar.gr2d=(Graphics2D)g;
-        icar.Calculate(0.0);
+        icar.Calculate(1.0f);
 
         this.setPreferredSize(new Dimension(800,500));
 
@@ -60,7 +60,7 @@ public class MyPanel extends JPanel implements ActionListener {
         g2D.setStroke(new BasicStroke(5));
         g2D.drawLine(0, 0, 500, 500);
         */
-        icar.Calculate(0.0);
+        icar.Calculate(0.5);
         icar.paint(g2D);
         walls.draw(g2D);
     }
